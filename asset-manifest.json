@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/chernobyl-360-web/static/css/main.073c9b0a.css",
-    "main.js": "/chernobyl-360-web/static/js/main.e7c0d415.js",
+    "main.css": "/chernobyl-360-web/static/css/main.84f42333.css",
+    "main.js": "/chernobyl-360-web/static/js/main.dde28aef.js",
     "index.html": "/chernobyl-360-web/index.html",
-    "main.073c9b0a.css.map": "/chernobyl-360-web/static/css/main.073c9b0a.css.map",
-    "main.e7c0d415.js.map": "/chernobyl-360-web/static/js/main.e7c0d415.js.map"
+    "main.84f42333.css.map": "/chernobyl-360-web/static/css/main.84f42333.css.map",
+    "main.dde28aef.js.map": "/chernobyl-360-web/static/js/main.dde28aef.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.e7c0d415.js"
+    "static/css/main.84f42333.css",
+    "static/js/main.dde28aef.js"
   ]
 }
