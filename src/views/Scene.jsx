@@ -44,7 +44,10 @@ AFRAME.registerComponent('play-on-vrdisplayactivate-or-enter-vr', {
 function AFrameScene() {
 
   return (
-    <a-scene>
+    <a-scene
+      vr-mode-ui="enabled: true"
+      loading-screen="enabled: false"
+    >
       
       <a-assets>
         <video id="video" style={{display: "none"}}
