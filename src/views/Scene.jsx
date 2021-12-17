@@ -1,10 +1,50 @@
 import { useEffect, useState } from 'react'
-import 'aframe'
+import * as AFRAME from 'aframe'
+
+AFRAME.registerComponent('play-on-window-click', {
+  init: function () {
+    this.onClick = this.onClick.bind(this);
+  },
+  play: function () {
+    window.addEventListener('click', this.onClick);
+  },
+  pause: function () {
+    window.removeEventListener('click', this.onClick);
+  },
+  onClick: function (evt) {
+    var video = this.el.components.material.material.map.image;
+    if (!video) { return; }
+    video.play();
+  }
+});
+
+AFRAME.registerComponent('play-on-vrdisplayactivate-or-enter-vr', {
+  init: function () {
+    this.playVideo = this.playVideo.bind(this);
+    this.playVideoNextTick = this.playVideoNextTick.bind(this);
+  },
+  play: function () {
+    window.addEventListener('vrdisplayactivate', this.playVideo);
+    this.el.sceneEl.addEventListener('enter-vr', this.playVideoNextTick);
+  },
+  pause: function () {
+    this.el.sceneEl.removeEventListener('enter-vr', this.playVideoNextTick);
+    window.removeEventListener('vrdisplayactivate', this.playVideo);
+  },
+  playVideoNextTick: function () {
+    setTimeout(this.playVideo);
+  },
+  playVideo: function () {
+    var video = this.el.components.material.material.map.image;
+    if (!video) { return; }
+    video.play();
+  }
+});
 
 function AFrameScene() {
 
   return (
-    <a-scene loading-screen="enabled: false;">
+    <a-scene>
       
       <a-assets>
         <video id="video" style={{display: "none"}}
@@ -24,7 +64,9 @@ function AFrameScene() {
         
       </a-camera>
       
-      <a-videosphere rotation="0 180 0" src="#video">
+      <a-videosphere rotation="0 180 0" src="#video"
+      play-on-window-click
+      play-on-vrdisplayactivate-or-enter-vr>
       </a-videosphere>
       
     </a-scene>
