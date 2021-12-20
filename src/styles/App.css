@@ -18,6 +18,7 @@
 
 #myEnterVRButton,
 #myEnterARButton {
+  display: none;
   position: relative;
   z-index: 10;
   color: white;

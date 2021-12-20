@@ -145,6 +145,7 @@ export const Scene = ({onLoaded, onReady}) => {
 
   useEffect(() => {
     let scene = getScene()
+
     if (scene.hasLoaded) {
       // onLoaded && onLoaded()
       setIsLoaded(true)
@@ -157,13 +158,22 @@ export const Scene = ({onLoaded, onReady}) => {
     })
   }, [])
 
+  if (isLoaded) {
+    let arButton = document.getElementById('myEnterARButton')
+    let vrButton = document.getElementById('myEnterVRButton')
+    arButton.style.display = 'inherit'
+    vrButton.style.display = 'inherit'
+  }
+
   return (
     <>
       {!isLoaded &&
         <LoadingView />
       }
       <AFrameScene />
-      <StartView />
+      {isLoaded &&
+        <StartView />
+      }
     </>
   )
 }
