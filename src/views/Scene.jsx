@@ -172,8 +172,9 @@ export const Scene = ({onLoaded, onReady}) => {
   };
 
   const isMbile = isMob()
+  const isAndroid = navigator.userAgent.includes('Linux')
 
-  if (isLoaded && isMbile) {
+  if (isLoaded && isMbile && isAndroid) {
     let arButton = document.getElementById('myEnterARButton')
     let vrButton = document.getElementById('myEnterVRButton')
     arButton.style.display = 'inherit'
@@ -190,7 +191,7 @@ export const Scene = ({onLoaded, onReady}) => {
         <LoadingView />
       }
       <AFrameScene />
-      {isLoaded && isMbile &&
+      {isLoaded && isMbile && isAndroid &&
         <StartView />
       }
     </>
