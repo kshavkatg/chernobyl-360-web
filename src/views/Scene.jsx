@@ -134,8 +134,6 @@ function AFrameScene() {
         </div>
         <div id="myEnterARButton" >
         </div>
-        <div id="myARButton" >
-        </div>
       </div>
     </a-scene>
   )
@@ -145,7 +143,6 @@ const getScene = () => document.getElementsByTagName('a-scene')[0]
 
 export const Scene = ({onLoaded, onReady}) => {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [showStart, setShowStart] = useState(true)
 
   const handleLoad = () => {
     setIsLoaded(true)
@@ -177,14 +174,9 @@ export const Scene = ({onLoaded, onReady}) => {
   const isAndroid = navigator.userAgent.includes('Linux')
 
   if (isLoaded && isMbile && isAndroid) {
-    let arButton = document.getElementById('myARButton')
+    let arButton = document.getElementById('myEnterARButton')
     let vrButton = document.getElementById('myEnterVRButton')
     arButton.style.display = 'inherit'
-    arButton.onclick = (() => {
-      arButton.style.display = "none"
-      vrButton.style.display = "none"
-      setShowStart(false)
-    })
     vrButton.style.display = 'inherit'
   }
   // if (!isMbile) {
@@ -198,7 +190,7 @@ export const Scene = ({onLoaded, onReady}) => {
         <LoadingView />
       }
       <AFrameScene />
-      {isLoaded && isMbile && isAndroid && showStart &&
+      {isLoaded && isMbile && isAndroid &&
         <StartView />
       }
     </>
