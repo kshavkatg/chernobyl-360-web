@@ -92,10 +92,22 @@ import StartView from './StartView'
 //   }
 // });
 
+AFRAME.registerComponent('intersect', {
+  init: function () {
+    console.log('intersect init')
+    const handleClick = () => {
+      console.log('box clicked')
+    }
+    this.el.addEventListener('mousedown', handleClick)
+    this.el.addEventListener('touchdown', handleClick)
+  },
+})
+
 function AFrameScene() {
 
   return (
     <a-scene
+      raycaster="objects: .cantap"
       loading-screen="enabled: false"
       device-orientation-permission-ui="enabled: true"
       vr-mode-ui="enterVRButton: #myEnterVRButton; enterARButton: #myEnterARButton"
@@ -107,6 +119,7 @@ function AFrameScene() {
           <source type="video/mp4"
                src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/R5WCqjT/360-video-maines-majestic-rocky-coast_Sq1wL45s__0d0aff323909ccf9a5c83f11b7808059__P640.mp4" />
         </video>
+        <img id="bordeauxtheater" src="https://cdn.glitch.com/f2ee9d74-9726-4bed-9c30-2d49d6391dee%2FOp%C3%A9ra_National_de_Bordeaux%20(1).jpg?1547235572572" crossOrigin="anonymous"></img>
       </a-assets>
       
       
@@ -122,9 +135,9 @@ function AFrameScene() {
         
       </a-camera>
       
-      <a-box position="-3 0 -5"></a-box>
-      <a-box position="-0 0 -5"></a-box>
-      <a-box position="3 0 -5"></a-box>
+      <a-sphere id="sphere" material="src: #bordeauxtheater:" className="cantap" intersect position="-3 0 -5"></a-sphere>
+      <a-box className="cantap" intersect position="-0 0 -5"></a-box>
+      <a-box className="cantap" intersect position="3 0 -5"></a-box>
       
       <a-videosphere rotation="0 180 0" src="#video">
       </a-videosphere>
