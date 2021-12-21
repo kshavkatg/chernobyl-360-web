@@ -134,6 +134,8 @@ function AFrameScene() {
         </div>
         <div id="myEnterARButton" >
         </div>
+        <div id="myARButton" >
+        </div>
       </div>
     </a-scene>
   )
@@ -175,7 +177,7 @@ export const Scene = ({onLoaded, onReady}) => {
   const isAndroid = navigator.userAgent.includes('Linux')
 
   if (isLoaded && isMbile && isAndroid) {
-    let arButton = document.getElementById('myEnterARButton')
+    let arButton = document.getElementById('myARButton')
     let vrButton = document.getElementById('myEnterVRButton')
     arButton.style.display = 'inherit'
     arButton.onclick = (() => {
