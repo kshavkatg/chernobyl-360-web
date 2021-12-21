@@ -111,9 +111,8 @@ function AFrameScene() {
       
       
       <a-camera 
-        look-controls="
-          mouseEnabled: true;
-          touchEnabled: true;"
+        look-controls="mouseEnabled: true; touchEnabled: true; magicWindowTrackingEnabled: true;"
+        wasd-controls-enabled="false" 
       >
         <a-entity cursor="fuse: true; fuseTimeout: 500 rayOrigin: mouse"
             position="0 0 -1"
