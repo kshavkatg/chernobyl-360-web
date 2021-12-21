@@ -97,7 +97,7 @@ function AFrameScene() {
   return (
     <a-scene
       loading-screen="enabled: false"
-      device-orientation-permission-ui="enabled: false"
+      device-orientation-permission-ui="enabled: true"
       vr-mode-ui="enterVRButton: #myEnterVRButton; enterARButton: #myEnterARButton"
     >
       
@@ -111,7 +111,7 @@ function AFrameScene() {
       
       
       <a-camera 
-        look-controls="mouseEnabled: true; touchEnabled: true; magicWindowTrackingEnabled: true;"
+        look-controls="enabled: true; mouseEnabled: true; touchEnabled: true; magicWindowTrackingEnabled: true;"
         wasd-controls-enabled="false" 
       >
         <a-entity cursor="fuse: true; fuseTimeout: 500 rayOrigin: mouse"
