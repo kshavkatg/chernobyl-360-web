@@ -123,6 +123,7 @@ AFRAME.registerComponent('sphereexpand', {
      }
 
     this.el.addEventListener('click', sphereloader);
+    this.el.addEventListener('touch', sphereloader);
        
   }});
 
@@ -147,6 +148,7 @@ AFRAME.registerComponent('sphereexpand', {
       }
  
        this.el.addEventListener('click', gobackhome);
+       this.el.addEventListener('touch', gobackhome);
          
     }});
 
