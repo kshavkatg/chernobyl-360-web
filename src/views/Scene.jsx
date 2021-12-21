@@ -135,7 +135,7 @@ function AFrameScene() {
         
       </a-camera>
       
-      <a-sphere id="sphere" material="src: #bordeauxtheater:" className="cantap" intersect position="-3 0 -5"></a-sphere>
+      <a-sphere id="sphere" material="src: #bordeauxtheater" className="cantap" intersect position="-3 0 -5"></a-sphere>
       <a-box className="cantap" intersect position="-0 0 -5"></a-box>
       <a-box className="cantap" intersect position="3 0 -5"></a-box>
       
