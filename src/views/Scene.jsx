@@ -162,7 +162,7 @@ function AFrameScene() {
       
       <a-assets>
         <video id="video" style={{display: "none"}}
-               muted autoPlay="true" loop crossOrigin="anonymous" playsInline>
+                autoPlay="false" loop crossOrigin="anonymous" playsInline>
           <source type="video/mp4"
                src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/R5WCqjT/360-video-maines-majestic-rocky-coast_Sq1wL45s__0d0aff323909ccf9a5c83f11b7808059__P640.mp4" />
         </video>
