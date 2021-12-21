@@ -1,11 +1,10 @@
 import '../styles/App.css';
-import * as AFRAME from 'aframe'
 import { Scene } from './Scene';
-console.log(AFRAME)
+import '../aframe/backhome'
+import '../aframe/intersect'
+import '../aframe/sphereexpand'
 
 function App() {
-
-  console.log(AFRAME)
   return (
     <div className="App">
       <Scene />
