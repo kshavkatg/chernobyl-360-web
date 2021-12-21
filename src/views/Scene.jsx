@@ -143,7 +143,7 @@ AFRAME.registerComponent('sphereexpand', {
 
         videosphere.setAttribute("visible", false)
         backSphere.setAttribute("visible", false)
-        video.stop()
+        video.pause()
       }
  
        this.el.addEventListener('click', gobackhome);
