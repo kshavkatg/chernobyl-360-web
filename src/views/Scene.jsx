@@ -98,10 +98,57 @@ AFRAME.registerComponent('intersect', {
     const handleClick = () => {
       console.log('box clicked')
     }
-    this.el.addEventListener('mousedown', handleClick)
-    this.el.addEventListener('touchdown', handleClick)
+    this.el.addEventListener('click', handleClick)
+    this.el.addEventListener('click', handleClick)
   },
 })
+
+AFRAME.registerComponent('sphereexpand', {
+    
+  init: function () {
+
+     let homeworldelements = document.querySelectorAll("#homeworld");
+     let videosphere = document.getElementById('videosphere')
+     let backSphere = document.getElementById('back')
+     let video = document.getElementById('video')
+
+     let sphereloader = () => {
+      video.play()
+      videosphere.setAttribute("visible", true)
+      backSphere.setAttribute("visible", true)
+      homeworldelements.forEach((homeworldelement) => {
+        homeworldelement.setAttribute("visible", false)
+      })
+
+     }
+
+    this.el.addEventListener('click', sphereloader);
+       
+  }});
+
+
+  AFRAME.registerComponent('backhome', {
+  
+    
+    init: function () {
+      
+      let homeworldelements = document.querySelectorAll("#homeworld");
+      let videosphere = document.getElementById('videosphere')
+      let backSphere = document.getElementById('back')
+      let video = document.getElementById('video')
+ 
+      let gobackhome = () => {
+        homeworldelements.forEach((homeworldelement) => {
+          homeworldelement.setAttribute("visible", true)})
+
+        videosphere.setAttribute("visible", false)
+        backSphere.setAttribute("visible", false)
+        video.stop()
+      }
+ 
+       this.el.addEventListener('click', gobackhome);
+         
+    }});
 
 function AFrameScene() {
 
@@ -142,34 +189,49 @@ function AFrameScene() {
         
       </a-camera>
       
+      <a-entity id="homeworld">
       <a-sphere 
             animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
             animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
             id="sphere" 
             material="src: #observatory" 
-            className="cantap" 
+            className="cantap"
             intersect 
-            position="-5 2 -6"></a-sphere>
+            position="-8 2 -6"
+            sphereexpand></a-sphere>
       <a-sphere
             animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
             animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
             id="sphere1" 
             material="src: #observatory2" 
-            className="cantap" 
+            className="cantap"
             intersect 
-            position="-0 2 -6"></a-sphere>
+            position="-3 2 -6"
+            sphereexpand></a-sphere>
       <a-sphere 
             animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
             animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
             id="sphere2" 
             material="src: #bordeauxtheater" 
-            className="cantap" 
+            className="cantap"
             intersect 
-            position="5 2 -6 "></a-sphere>
+            position="2 2 -6 "
+            sphereexpand></a-sphere>
+      </a-entity>
       
-      <a-sky src="#background1" rotation="0 0 0"></a-sky>
+      <a-entity position="0 5 -6 " id="back" visible="false">
+          <a-text scale="1.5 1.5 1.5" position="-0.7 -1.5 0" value="GO BACK" ></a-text>
+          <a-sphere 
+                animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+                animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+                className="cantap"
+                intersect 
+                backhome></a-sphere>
+      </a-entity>
+      
+      <a-sky id="homeworld" src="#background1" rotation="0 0 0"></a-sky>
 
-      <a-videosphere visible="false" rotation="0 180 0" src="#video">
+      <a-videosphere id="videosphere" visible="false" rotation="0 0 0" src="#video">
       </a-videosphere>
 
       <div className='buttons'>
