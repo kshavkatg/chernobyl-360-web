@@ -190,9 +190,9 @@ export const Scene = ({onLoaded, onReady}) => {
         <LoadingView />
       }
       <AFrameScene />
-      {isLoaded && isMbile && isAndroid &&
+      {/* {isLoaded && isMbile && isAndroid &&
         <StartView />
-      }
+      } */}
     </>
   )
 }
