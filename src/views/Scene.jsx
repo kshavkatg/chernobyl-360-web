@@ -181,7 +181,7 @@ function AFrameScene() {
         look-controls="enabled: true; mouseEnabled: true; touchEnabled: true; magicWindowTrackingEnabled: true;"
         wasd-controls-enabled="false" 
       >
-        <a-entity cursor="fuse: true; fuseTimeout: 500 rayOrigin: mouse"
+        <a-entity cursor="fuse: false; fuseTimeout: 500 rayOrigin: mouse"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
             material="color: yellow; shader: flat"
