@@ -144,7 +144,7 @@ function AFrameScene() {
       <a-sphere id="sphere1" material="src: #observatory2" className="cantap" intersect position="-0 2 -6"></a-sphere>
       <a-sphere id="sphere2" material="src: #bordeauxtheater" className="cantap" intersect position="5 2 -6 "></a-sphere>
       
-      <a-sky src="background1" rotation="0 -130 0"></a-sky>
+      <a-sky src="#background1" rotation="0 0 0"></a-sky>
 
       <a-videosphere visible="false" rotation="0 180 0" src="#video">
       </a-videosphere>
