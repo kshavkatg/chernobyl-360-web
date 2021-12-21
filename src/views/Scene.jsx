@@ -4,97 +4,10 @@ import 'aframe'
 import LoadingView from './LoadingView'
 import StartView from './StartView'
 
-// AFRAME.registerComponent('play-on-window-click', {
-//   init: function () {
-//     this.onClick = this.onClick.bind(this);
-//   },
-//   play: function () {
-//     window.addEventListener('click', this.onClick);
-//   },
-//   pause: function () {
-//     window.removeEventListener('click', this.onClick);
-//   },
-//   onClick: function (evt) {
-//     var video = this.el.components.material.material.map.image;
-//     if (!video) { return; }
-//     video.play();
-//   }
-// });
-
-// AFRAME.registerComponent('play-on-vrdisplayactivate-or-enter-vr', {
-//   init: function () {
-//     this.playVideo = this.playVideo.bind(this);
-//     this.playVideoNextTick = this.playVideoNextTick.bind(this);
-//   },
-//   play: function () {
-//     window.addEventListener('vrdisplayactivate', this.playVideo);
-//     this.el.sceneEl.addEventListener('enter-vr', this.playVideoNextTick);
-//   },
-//   pause: function () {
-//     this.el.sceneEl.removeEventListener('enter-vr', this.playVideoNextTick);
-//     window.removeEventListener('vrdisplayactivate', this.playVideo);
-//   },
-//   playVideoNextTick: function () {
-//     setTimeout(this.playVideo);
-//   },
-//   playVideo: function () {
-//     var video = this.el.components.material.material.map.image;
-//     if (!video) { return; }
-//     video.play();
-//   }
-// });
-
-// AFRAME.registerComponent('arrow-key-rotation', {
-//   schema: {
-//     enabled: {default: true},
-//     dx: {default: 2.0},
-//     dy: {default: 2.0},
-//   },
-//   init: function () {
-//     this.onKeyDown = this.onKeyDown.bind(this);
-//     this.onKeyUp = this.onKeyUp.bind(this);
-//     this.directionX = 0;
-//     this.directionY = 0;
-//   },
-//   play: function () {
-//     window.addEventListener('keydown', this.onKeyDown);
-//     window.addEventListener('keyup', this.onKeyUp);
-//   },
-//   pause: function () {
-//     window.removeEventListener('keydown', this.onKeyDown);
-//     window.removeEventListener('keyup', this.onKeyUp);          
-//   },
-//   onKeyDown: function (evt) {
-//     switch (evt.keyCode) {
-//       case 37: this.directionX = 1; break;
-//       case 38: this.directionY = 1; break;
-//       case 39: this.directionX = -1; break;
-//       case 40: this.directionY = -1; break;
-//     }
-//   },
-//   onKeyUp: function (evt) {
-//     switch (evt.keyCode) {
-//       case 37: this.directionX = 0; break;
-//       case 38: this.directionY = 0; break;
-//       case 39: this.directionX = 0; break;
-//       case 40: this.directionY = 0; break;
-//     }          
-//   },
-//   tick: function (t, dt) {
-//     if (!this.data.enabled) { return; }
-//     var rotation = this.el.getAttribute('rotation');
-//     if (!rotation) { return; }
-//     if (this.directionX || this.directionY) {
-//       rotation.x += this.data.dx * this.directionY;
-//       rotation.y += this.data.dy * this.directionX;
-//       this.el.setAttribute('rotation', rotation);
-//     }
-//   }
-// });
 
 AFRAME.registerComponent('intersect', {
   init: function () {
-    console.log('intersect init')
+
     const handleClick = () => {
       console.log('box clicked')
     }
@@ -129,8 +42,7 @@ AFRAME.registerComponent('sphereexpand', {
 
 
   AFRAME.registerComponent('backhome', {
-  
-    
+     
     init: function () {
       
       let homeworldelements = document.querySelectorAll("#homeworld");
@@ -164,7 +76,7 @@ function AFrameScene() {
       
       <a-assets>
         <video id="video" style={{display: "none"}}
-                autoPlay="false" loop crossOrigin="anonymous" playsInline>
+                autoPlay={false} loop crossOrigin="anonymous" playsInline>
           <source type="video/mp4"
                src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/R5WCqjT/360-video-maines-majestic-rocky-coast_Sq1wL45s__0d0aff323909ccf9a5c83f11b7808059__P640.mp4" />
         </video>
@@ -179,46 +91,43 @@ function AFrameScene() {
       
       <a-camera 
         look-controls="enabled: true; mouseEnabled: true; touchEnabled: true; magicWindowTrackingEnabled: true;"
-        wasd-controls-enabled="false" 
-      >
-        <a-entity cursor="fuse: false; fuseTimeout: 500 rayOrigin: mouse"
+        wasd-controls-enabled="false">
+
+        <a-entity cursor="fuse: false;"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
-            material="color: yellow; shader: flat"
-            >
-            
-        </a-entity>
+            material="color: yellow; shader: flat"></a-entity>
         
       </a-camera>
       
       <a-entity id="homeworld">
-      <a-sphere 
-            animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
-            animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
-            id="sphere" 
-            material="src: #observatory" 
-            className="cantap"
-            intersect 
-            position="-8 2 -6"
-            sphereexpand></a-sphere>
-      <a-sphere
-            animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
-            animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
-            id="sphere1" 
-            material="src: #observatory2" 
-            className="cantap"
-            intersect 
-            position="-3 2 -6"
-            sphereexpand></a-sphere>
-      <a-sphere 
-            animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
-            animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
-            id="sphere2" 
-            material="src: #bordeauxtheater" 
-            className="cantap"
-            intersect 
-            position="2 2 -6 "
-            sphereexpand></a-sphere>
+          <a-sphere 
+                animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+                animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+                id="sphere" 
+                material="src: #observatory" 
+                className="cantap"
+                intersect 
+                position="-6 2 -6"
+                sphereexpand></a-sphere>
+          <a-sphere
+                animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+                animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+                id="sphere1" 
+                material="src: #observatory2" 
+                className="cantap"
+                intersect 
+                position="-0 2 -6"
+                sphereexpand></a-sphere>
+          <a-sphere 
+                animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+                animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+                id="sphere2" 
+                material="src: #bordeauxtheater" 
+                className="cantap"
+                intersect 
+                position="6 2 -6 "
+                sphereexpand></a-sphere>
       </a-entity>
       
       <a-entity position="0 5 -6 " id="back" visible="false">
@@ -233,15 +142,13 @@ function AFrameScene() {
       
       <a-sky id="homeworld" src="#background1" rotation="0 0 0"></a-sky>
 
-      <a-videosphere id="videosphere" visible="false" rotation="0 0 0" src="#video">
-      </a-videosphere>
+      <a-videosphere id="videosphere" visible="false" rotation="0 0 0" src="#video"></a-videosphere>
 
       <div className='buttons'>
-        <div id="myEnterVRButton" >
-        </div>
-        <div id="myEnterARButton" >
-        </div>
+        <div id="myEnterVRButton" />
+        <div id="myEnterARButton" />
       </div>
+      
     </a-scene>
   )
 }
@@ -286,10 +193,6 @@ export const Scene = ({onLoaded, onReady}) => {
     arButton.style.display = 'inherit'
     vrButton.style.display = 'inherit'
   }
-  // if (!isMbile) {
-  //   const video = document.getElementById('video')
-  //   video.play()
-  // }
 
   return (
     <>
