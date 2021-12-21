@@ -135,14 +135,37 @@ function AFrameScene() {
         <a-entity cursor="fuse: true; fuseTimeout: 500 rayOrigin: mouse"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
-            material="color: yellow; shader: flat">
+            material="color: yellow; shader: flat"
+            >
+            
         </a-entity>
         
       </a-camera>
       
-      <a-sphere id="sphere" material="src: #observatory" className="cantap" intersect position="-5 2 -6"></a-sphere>
-      <a-sphere id="sphere1" material="src: #observatory2" className="cantap" intersect position="-0 2 -6"></a-sphere>
-      <a-sphere id="sphere2" material="src: #bordeauxtheater" className="cantap" intersect position="5 2 -6 "></a-sphere>
+      <a-sphere 
+            animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+            animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+            id="sphere" 
+            material="src: #observatory" 
+            className="cantap" 
+            intersect 
+            position="-5 2 -6"></a-sphere>
+      <a-sphere
+            animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+            animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+            id="sphere1" 
+            material="src: #observatory2" 
+            className="cantap" 
+            intersect 
+            position="-0 2 -6"></a-sphere>
+      <a-sphere 
+            animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+            animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
+            id="sphere2" 
+            material="src: #bordeauxtheater" 
+            className="cantap" 
+            intersect 
+            position="5 2 -6 "></a-sphere>
       
       <a-sky src="#background1" rotation="0 0 0"></a-sky>
 
