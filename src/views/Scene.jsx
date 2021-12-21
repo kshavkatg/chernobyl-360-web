@@ -143,6 +143,7 @@ const getScene = () => document.getElementsByTagName('a-scene')[0]
 
 export const Scene = ({onLoaded, onReady}) => {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [showStart, setShowStart] = useState(true)
 
   const handleLoad = () => {
     setIsLoaded(true)
@@ -177,6 +178,11 @@ export const Scene = ({onLoaded, onReady}) => {
     let arButton = document.getElementById('myEnterARButton')
     let vrButton = document.getElementById('myEnterVRButton')
     arButton.style.display = 'inherit'
+    arButton.onclick = (() => {
+      arButton.style.display = "none"
+      vrButton.style.display = "none"
+      setShowStart(false)
+    })
     vrButton.style.display = 'inherit'
   }
   // if (!isMbile) {
@@ -190,9 +196,9 @@ export const Scene = ({onLoaded, onReady}) => {
         <LoadingView />
       }
       <AFrameScene />
-      {/* {isLoaded && isMbile && isAndroid &&
+      {isLoaded && isMbile && isAndroid && showStart &&
         <StartView />
-      } */}
+      }
     </>
   )
 }
