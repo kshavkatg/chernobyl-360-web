@@ -41,10 +41,11 @@ export default function AFrameScene() {
         
       </a-camera>
       
-      <a-entity id="homeworld" >
+      <a-entity id="homeworld">
+
         <a-entity 
           id="sphere_group_one"
-          position="-6 2 -6"
+          position="-6.4 2.8 -2.8"
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
@@ -57,12 +58,12 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;" text="width: 5; align: center; anchor: center; value: GO BACK;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;" text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: OPACHYCHI VILLAGE;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
         <a-entity 
           id="sphere_group_two"
-          position="-0 2 -6"
+          position="-4.4 2.1 -5.2"
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere
@@ -75,12 +76,12 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="width: 5; align: center; anchor: center; value: GO BACK;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: 'GHOST TOWN' PRIPYAT;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
         <a-entity 
           id="sphere_group_three"
-          position="6 2 -6 "
+          position="-1.2 2 -7.1 "
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
@@ -93,8 +94,81 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="width: 5; align: center; anchor: center; value: GO BACK;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: WATCH TRAILER;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
+
+        <a-entity 
+          id="sphere_group_four"
+          position="2.1 2.8 -6.8 "
+          animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+          animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
+          <a-sphere 
+                id="sphere_four" 
+                material="src: #observatory" 
+                className="cantap"
+                intersect 
+                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
+          <a-sphere
+                id="sphere_orange_one"
+                scale="1.1 1.1 1.1"
+                material="color: orange; side: back;"></a-sphere>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: FLY OVER;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+        </a-entity>
+
+        <a-entity 
+          id="sphere_group_four"
+          position="4.1 1.7 -6.5 "
+          animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+          animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
+          <a-sphere 
+                id="sphere_four" 
+                material="src: #observatory2" 
+                className="cantap"
+                intersect 
+                sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
+          <a-sphere
+                id="sphere_orange_one"
+                scale="1.1 1.1 1.1"
+                material="color: orange; side: back;"></a-sphere>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: ARTIFACTS;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+        </a-entity>
+
+        <a-entity 
+          id="sphere_group_four"
+          position="5.3 4.3 -4.8 "
+          animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+          animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
+          <a-sphere 
+                id="sphere_four" 
+                material="src: #bordeauxtheater" 
+                className="cantap"
+                intersect 
+                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
+          <a-sphere
+                id="sphere_orange_one"
+                scale="1.1 1.1 1.1"
+                material="color: orange; side: back;"></a-sphere>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: RADIOACTIVE WASTE MANAGMENT;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+        </a-entity>
+
+        <a-entity 
+          id="sphere_group_four"
+          position="6.8 2.9 -2.4 "
+          animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
+          animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
+          <a-sphere 
+                id="sphere_four" 
+                material="src: #observatory" 
+                className="cantap"
+                intersect 
+                sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
+          <a-sphere
+                id="sphere_orange_one"
+                scale="1.1 1.1 1.1"
+                material="color: orange; side: back;"></a-sphere>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: DRUM MONITORING;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+        </a-entity>
+
       </a-entity>
       
       <a-entity position="0 5 -6 " id="back" visible="false">
