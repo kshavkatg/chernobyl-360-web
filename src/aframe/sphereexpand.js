@@ -1,13 +1,17 @@
 import * as AFRAME from 'aframe'
 
 AFRAME.registerComponent('sphereexpand', {
+  schema: {
+    videoSrc: {type: 'string', default: '#video_one'},
+    videosphereId: {type: 'string', default: '#videosphere_one'}
+  },
     
   init: function () {
 
-     let homeworldelements = document.querySelectorAll("#homeworld");
-     let videosphere = document.getElementById('videosphere')
+     let homeworldelements = document.querySelectorAll("#homeworld")
      let backSphere = document.getElementById('back')
-     let video = document.getElementById('video')
+     let videosphere = document.getElementById(this.data.videosphereId)
+     let video = document.getElementById(this.data.videoSrc)
 
      let sphereloader = () => {
       video.play()
@@ -21,5 +25,5 @@ AFRAME.registerComponent('sphereexpand', {
 
     this.el.addEventListener('click', sphereloader);
     this.el.addEventListener('touch', sphereloader);
-       
-}});
+  }
+});
