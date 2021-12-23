@@ -20,7 +20,7 @@ AFRAME.registerComponent('hide-menu', {
      }
 
      const hideMenu = (e) => {
-      console.log('touch or click', e.type)
+      console.log('intersectionDistance', intersectionDistance)
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
       if (intersectionDistance === e.detail.intersection.distance || e.type === "touch") {
         video.play()
