@@ -1,7 +1,6 @@
 import '../styles/App.css';
 import { Scene } from './Scene';
 import '../aframe/backhome'
-import '../aframe/intersect'
 import '../aframe/sphereexpand'
 import '../aframe/bilboard'
 import '../aframe/show-menu'
