@@ -22,6 +22,7 @@ AFRAME.registerComponent('show-menu', {
      }
 
      const showMenu = (e) => {
+      console.log('touch or click', e.type)
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
       if (intersectionDistance === e.detail.intersection.distance || e.type === "touch") {
         videoOne.pause()

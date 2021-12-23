@@ -21,6 +21,7 @@ AFRAME.registerComponent('sphereexpand', {
 
     const sphereloader = (e) => {
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
+      console.log('touch or click', e.type)
       if (intersectionDistance === e.detail.intersection.distance || e.type === "touch") {
         video.play()
         videosphere.setAttribute("visible", true)
