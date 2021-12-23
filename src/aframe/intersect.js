@@ -4,7 +4,7 @@ AFRAME.registerComponent('intersect', {
   init: function () {
 
     const handleClick = () => {
-      console.log('box clicked')
+      console.log(this.el, 'clicked')
     }
     this.el.addEventListener('click', handleClick)
     this.el.addEventListener('click', handleClick)

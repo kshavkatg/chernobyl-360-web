@@ -4,6 +4,8 @@ import '../aframe/backhome'
 import '../aframe/intersect'
 import '../aframe/sphereexpand'
 import '../aframe/bilboard'
+import '../aframe/show-menu'
+import '../aframe/hide-menu'
 
 function App() {
   return (

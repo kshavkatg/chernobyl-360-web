@@ -1,10 +1,12 @@
 import 'aframe'
+import { useEffect } from 'react'
 
 export default function AFrameScene() {
+  useEffect(() => {
+  }, [])
 
   return (
     <a-scene
-      raycaster="objects: .cantap"
       loading-screen="enabled: false"
       device-orientation-permission-ui="enabled: true"
       vr-mode-ui="enterVRButton: #myEnterVRButton; enterARButton: #myEnterARButton"
@@ -34,7 +36,8 @@ export default function AFrameScene() {
         look-controls="enabled: true; mouseEnabled: true; touchEnabled: true; magicWindowTrackingEnabled: true;"
         wasd-controls-enabled="false">
 
-        <a-entity cursor="fuse: false;"
+        <a-entity cursor="fuse: false; fuseTimeout: 500;"
+            raycaster="objects: .collidable;"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
             material="color: yellow; shader: flat"></a-entity>
@@ -50,8 +53,8 @@ export default function AFrameScene() {
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
                 id="sphere_one"
+                class="collidable menu"
                 material="src: #observatory" 
-                className="cantap"
                 intersect 
                 sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
           <a-sphere
@@ -69,7 +72,7 @@ export default function AFrameScene() {
           <a-sphere
                 id="sphere_two" 
                 material="src: #observatory2" 
-                className="cantap"
+                class="collidable menu"
                 intersect 
                 sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
           <a-sphere
@@ -85,9 +88,9 @@ export default function AFrameScene() {
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
-                id="sphere_three" 
+                id="sphere_three"
+                class="collidable menu" 
                 material="src: #bordeauxtheater" 
-                className="cantap"
                 intersect 
                 sphereexpand="videoSrc: video_three; videosphereId: videosphere_three;"></a-sphere>
           <a-sphere
@@ -103,9 +106,9 @@ export default function AFrameScene() {
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
-                id="sphere_four" 
+                id="sphere_four"
+                class="collidable menu"
                 material="src: #observatory" 
-                className="cantap"
                 intersect 
                 sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
           <a-sphere
@@ -121,9 +124,9 @@ export default function AFrameScene() {
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
-                id="sphere_four" 
+                id="sphere_four"
+                class="collidable menu"
                 material="src: #observatory2" 
-                className="cantap"
                 intersect 
                 sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
           <a-sphere
@@ -139,9 +142,9 @@ export default function AFrameScene() {
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
-                id="sphere_four" 
+                id="sphere_four"
+                class="collidable menu"
                 material="src: #bordeauxtheater" 
-                className="cantap"
                 intersect 
                 sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
           <a-sphere
@@ -153,13 +156,13 @@ export default function AFrameScene() {
 
         <a-entity 
           id="sphere_group_four"
+          class="collidable"
           position="6.8 2.9 -2.4 "
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
                 id="sphere_four" 
                 material="src: #observatory" 
-                className="cantap"
                 intersect 
                 sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
           <a-sphere
@@ -176,16 +179,22 @@ export default function AFrameScene() {
           <a-sphere 
                 animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
                 animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
-                className="cantap"
+                class="collidable"
                 intersect 
                 backhome></a-sphere>
       </a-entity>
       
       <a-sky id="homeworld" src="#background1" rotation="0 0 0"></a-sky>
 
-      <a-videosphere id="videosphere_one" visible="false" rotation="0 0 0" src="#video_one"></a-videosphere>
-      <a-videosphere id="videosphere_two" visible="false" rotation="0 0 0" src="#video_two"></a-videosphere>
-      <a-videosphere id="videosphere_three" visible="false" rotation="0 0 0" src="#video_three"></a-videosphere>
+      <a-videosphere show-menu="videoSrc: video_one;" id="videosphere_one" visible="false" rotation="0 0 0" src="#video_one"></a-videosphere>
+      <a-videosphere show-menu="videoSrc: video_two;" id="videosphere_two" visible="false" rotation="0 0 0" src="#video_two"></a-videosphere>
+      <a-videosphere show-menu="videoSrc: video_three;" id="videosphere_three" visible="false" rotation="0 0 0" src="#video_three"></a-videosphere>
+
+      <a-sphere
+            visible="false"
+            radius="49"
+            id="sphere_overlay"
+            material="color: black; opacity: 0.7; side: back;"></a-sphere>
 
       <div className='buttons'>
         <div id="myEnterVRButton" />

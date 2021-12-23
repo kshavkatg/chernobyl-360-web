@@ -29,7 +29,6 @@ export const billboardComponent = {
   updateBillboarding() {
     if (this.camera === null || this.camera === undefined) {
       this.camera = document.getElementById(this.data.targetCameraId)
-      console.log(this.camera)
     }
     let target = this.camera.object3D.position.clone()
     if (this.data.perpendicularToCameraDirection) {

@@ -4,16 +4,17 @@ AFRAME.registerComponent('backhome', {
      
   init: function () {
     
-    let homeworldelements = document.querySelectorAll("#homeworld");
-    let videosphereOne = document.getElementById('videosphere_one')
-    let videosphereTwo = document.getElementById('videosphere_two')
-    let videosphereThree = document.getElementById('videosphere_three')
-    let backSphere = document.getElementById('back')
-    let videoOne = document.getElementById('video_one')
-    let videoTwo = document.getElementById('video_two')
-    let videoThree = document.getElementById('video_three')
+    const homeworldelements = document.querySelectorAll("#homeworld");
+    const videosphereOne = document.getElementById('videosphere_one')
+    const videosphereTwo = document.getElementById('videosphere_two')
+    const videosphereThree = document.getElementById('videosphere_three')
+    const backSphere = document.getElementById('back')
+    const videoOne = document.getElementById('video_one')
+    const videoTwo = document.getElementById('video_two')
+    const videoThree = document.getElementById('video_three')
+    const overlay = document.getElementById("sphere_overlay")
 
-    let gobackhome = () => {
+    const gobackhome = () => {
       homeworldelements.forEach((homeworldelement) => {
         homeworldelement.setAttribute("visible", true)})
 
@@ -21,6 +22,7 @@ AFRAME.registerComponent('backhome', {
       videosphereTwo.setAttribute("visible", false)
       videosphereThree.setAttribute("visible", false)
       backSphere.setAttribute("visible", false)
+      overlay.setAttribute("visible", false)
       videoOne.pause()
       videoTwo.pause()
       videoThree.pause()
