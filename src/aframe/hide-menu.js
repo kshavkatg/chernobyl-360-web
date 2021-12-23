@@ -16,13 +16,13 @@ AFRAME.registerComponent('hide-menu', {
      let intersectionDistance = 0;
 
      const getDownCoordinates = (e) => {
-      intersectionDistance = e.detail.intersection.distance;
+      intersectionDistance = Math.round(e.detail.intersection.distance * 10) / 10;
      }
 
      const hideMenu = (e) => {
-      console.log('intersectionDistance', intersectionDistance)
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
-      if (intersectionDistance === e.detail.intersection.distance || e.type === "touch") {
+      let newDistance = Math.round(e.detail.intersection.distance * 10) / 10;
+      if (intersectionDistance === newDistance || e.type === "touch") {
         video.play()
         backSphere.setAttribute("visible", false)
         homeworldelements.forEach((homeworldelement) => {

@@ -18,13 +18,13 @@ AFRAME.registerComponent('show-menu', {
      let intersectionDistance = 0;
 
      const getDownCoordinates = (e) => {
-      intersectionDistance = e.detail.intersection.distance;
+      intersectionDistance = Math.round(e.detail.intersection.distance * 10) / 10;
      }
 
      const showMenu = (e) => {
-      console.log('intersectionDistance', intersectionDistance)
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
-      if (intersectionDistance === e.detail.intersection.distance || e.type === "touch") {
+      let newDistance = Math.round(e.detail.intersection.distance * 10) / 10;
+      if (intersectionDistance === newDistance || e.type === "touch") {
         videoOne.pause()
         videoTwo.pause()
         videoThree.pause()

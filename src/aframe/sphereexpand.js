@@ -16,13 +16,13 @@ AFRAME.registerComponent('sphereexpand', {
     let intersectionDistance = 0;
 
     const getDownCoordinates = (e) => {
-     intersectionDistance = e.detail.intersection.distance;
+     intersectionDistance = Math.round(e.detail.intersection.distance * 10) / 10;
     }
 
     const sphereloader = (e) => {
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
-      console.log('intersectionDistance', intersectionDistance)
-      if (intersectionDistance === e.detail.intersection.distance || e.type === "touch") {
+      let newDistance = Math.round(e.detail.intersection.distance * 10) / 10;
+      if (intersectionDistance === newDistance || e.type === "touch") {
         video.play()
         videosphere.setAttribute("visible", true)
         // hide homeworld elements
