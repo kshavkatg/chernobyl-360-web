@@ -184,7 +184,7 @@ export default function AFrameScene() {
           <a-sphere 
                 id="sphere_four" 
                 class="collidable menu"
-                material="src: #img-seven`" 
+                material="src: #img-seven" 
                 sphereexpand="videoSrc: video_seven;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
