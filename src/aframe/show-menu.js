@@ -9,7 +9,8 @@ AFRAME.registerComponent('show-menu', {
 
      const homeworldelements = document.querySelectorAll("#homeworld")
      const overlay = document.getElementById("sphere_overlay")
-     const backSphere = document.getElementById('back')
+     const backGroup = document.getElementById('back')
+     const backSphere = document.getElementById('back_sphere')
      const videoOne = document.getElementById('video_one')
      const videoTwo = document.getElementById('video_two')
      const videoThree = document.getElementById('video_three')
@@ -28,7 +29,8 @@ AFRAME.registerComponent('show-menu', {
         videoOne.pause()
         videoTwo.pause()
         videoThree.pause()
-        backSphere.setAttribute("visible", true)
+        backGroup.setAttribute("visible", true)
+        backSphere.setAttribute("backhome", `videoSrc: ${this.data.videoSrc}`)
         // show and make the overlay collidable
         overlay.setAttribute("visible", true)
         overlay.setAttribute('hide-menu', `videoSrc: ${this.data.videoSrc}`)

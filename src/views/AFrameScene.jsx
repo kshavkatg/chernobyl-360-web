@@ -73,7 +73,7 @@ export default function AFrameScene() {
                 id="sphere_one"
                 class="collidable menu"
                 material="src: #observatory" 
-                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
+                sphereexpand="videoSrc: video_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -90,7 +90,7 @@ export default function AFrameScene() {
                 id="sphere_two" 
                 material="src: #observatory2" 
                 class="collidable menu"
-                sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
+                sphereexpand="videoSrc: video_two;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -108,7 +108,7 @@ export default function AFrameScene() {
                 scale="0.8 0.8 0.8"
                 class="collidable menu" 
                 material="src: #bordeauxtheater" 
-                sphereexpand="videoSrc: video_three; videosphereId: videosphere_three;"></a-sphere>
+                sphereexpand="videoSrc: video_three;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="0.9 0.9 0.9"
@@ -125,7 +125,7 @@ export default function AFrameScene() {
                 id="sphere_four"
                 class="collidable menu"
                 material="src: #observatory" 
-                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
+                sphereexpand="videoSrc: video_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -143,7 +143,7 @@ export default function AFrameScene() {
                 class="collidable menu"
                 scale="0.7 0.7 0.7"
                 material="src: #observatory2" 
-                sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
+                sphereexpand="videoSrc: video_two;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="0.8 0.8 0.8"
@@ -160,7 +160,7 @@ export default function AFrameScene() {
                 id="sphere_four"
                 class="collidable menu"
                 material="src: #bordeauxtheater" 
-                sphereexpand="videoSrc: video_three; videosphereId: videosphere_three;"></a-sphere>
+                sphereexpand="videoSrc: video_three;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -177,7 +177,7 @@ export default function AFrameScene() {
                 id="sphere_four" 
                 class="collidable menu"
                 material="src: #observatory" 
-                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
+                sphereexpand="videoSrc: video_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -189,18 +189,16 @@ export default function AFrameScene() {
       
       <a-entity position="0 5 -6 " id="back" visible="false">
           <a-entity billboard="targetCameraId: camera;" text="width: 5; align: center; anchor: center; value: GO BACK;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
-          <a-sphere 
+          <a-sphere
+                id="back_sphere"
                 animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
                 animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
-                class="collidable"
-                backhome></a-sphere>
+                class="collidable"></a-sphere>
       </a-entity>
       
       <a-sky id="homeworld" src="#background1" rotation="0 0 0"></a-sky>
 
-      <a-videosphere show-menu="videoSrc: video_one;" id="videosphere_one" visible="false" rotation="0 0 0" src="#video_one"></a-videosphere>
-      <a-videosphere show-menu="videoSrc: video_two;" id="videosphere_two" visible="false" rotation="0 0 0" src="#video_two"></a-videosphere>
-      <a-videosphere show-menu="videoSrc: video_three;" id="videosphere_three" visible="false" rotation="0 0 0" src="#video_three"></a-videosphere>
+      <a-videosphere id="videosphere" visible="false" rotation="0 0 0" src="#video_one"></a-videosphere>
 
       <a-sphere
             visible="false"
