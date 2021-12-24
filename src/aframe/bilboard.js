@@ -15,7 +15,6 @@ export const billboardComponent = {
     invert: {default: false},
   },
   init() {
-    console.log('init billboard')
     this.updateBillboarding = this.updateBillboarding.bind(this)
     if (this.data.biilboardOnce) {
       setTimeout(this.updateBillboarding, this.data.biilboardOnceInMs)

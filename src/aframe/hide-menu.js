@@ -7,12 +7,6 @@ AFRAME.registerComponent('hide-menu', {
     
   init: function () {
 
-     const homeworldelements = document.querySelectorAll("#homeworld")
-     const overlay = document.getElementById("sphere_overlay")
-     const backSphere = document.getElementById('back')
-     const video = document.getElementById(this.data.videoSrc)
-     const menuElements = document.querySelectorAll(".menu")
-
      let intersectionDistance = 0;
 
      const getDownCoordinates = (e) => {
@@ -20,6 +14,12 @@ AFRAME.registerComponent('hide-menu', {
      }
 
      const hideMenu = (e) => {
+      const homeworldelements = document.querySelectorAll("#homeworld")
+      const overlay = document.getElementById("sphere_overlay")
+      const backSphere = document.getElementById('back')
+      const video = document.getElementById(this.data.videoSrc)
+      const menuElements = document.querySelectorAll(".menu")
+
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
       let newDistance = Math.round(e.detail.intersection.distance * 10) / 10;
       if (intersectionDistance === newDistance || e.type === "touch") {

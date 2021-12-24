@@ -17,10 +17,10 @@ export default function AFrameScene() {
           <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/R5WCqjT/360-video-maines-majestic-rocky-coast_Sq1wL45s__0d0aff323909ccf9a5c83f11b7808059__P640.mp4" />
         </video>
         <video id="video_two" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
-          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/36MTy7r/videoblocks-male-rider-doing-big-360-on-snow-jump-ski-snowboard_sutmhps9g__bc93952493a286f0facc155286293905__P360.mp4" />
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-paris-france-september-29-2017-360-vr-video-citizens-and-tourists-walking-on-the-area-under-the-eiffel-tower-overlooking-champ-de-mars-and-palais-de-chaillot_Sc3DHNh44__7a6397c4a59dcff5d391cbd9b3841629__P640.mp4" />
         </video>
         <video id="video_three" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
-          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/pbJRSBz/videoblocks-virtual-reality-360-view-from-the-vikos-gorge-in-the-pindus-mountains-of-northern-greece_BALK5vDTW__c89f744998ab5cd8f0e77575aa8e3a80__P640.mp4" />
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-360-vr-video-white-yacht-sailing-in-the-ocean-view-to-the-distant-mountains-on-of-mauritius-island-and-vast-ocean-from-the-upper-deck-fishing-rods-fixed-at-the-back-of-the-motor-boat_HuMfB__73ffdfe4132e11b3b0d08e53e03715f6__P640.mp4" />
         </video>
         
         <img id="background1" src="https://cdn.eso.org/images/publicationjpg/ESO_Paranal_360_Marcio_Cabral_Chile_09-CC.jpg" crossOrigin="anonymous"></img>
@@ -55,7 +55,6 @@ export default function AFrameScene() {
                 id="sphere_one"
                 class="collidable menu"
                 material="src: #observatory" 
-                intersect 
                 sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -73,7 +72,6 @@ export default function AFrameScene() {
                 id="sphere_two" 
                 material="src: #observatory2" 
                 class="collidable menu"
-                intersect 
                 sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -91,7 +89,6 @@ export default function AFrameScene() {
                 id="sphere_three"
                 class="collidable menu" 
                 material="src: #bordeauxtheater" 
-                intersect 
                 sphereexpand="videoSrc: video_three; videosphereId: videosphere_three;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -109,7 +106,6 @@ export default function AFrameScene() {
                 id="sphere_four"
                 class="collidable menu"
                 material="src: #observatory" 
-                intersect 
                 sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -127,7 +123,6 @@ export default function AFrameScene() {
                 id="sphere_four"
                 class="collidable menu"
                 material="src: #observatory2" 
-                intersect 
                 sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -145,8 +140,7 @@ export default function AFrameScene() {
                 id="sphere_four"
                 class="collidable menu"
                 material="src: #bordeauxtheater" 
-                intersect 
-                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
+                sphereexpand="videoSrc: video_three; videosphereId: videosphere_three;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -156,15 +150,14 @@ export default function AFrameScene() {
 
         <a-entity 
           id="sphere_group_four"
-          class="collidable"
           position="6.8 2.9 -2.4 "
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
                 id="sphere_four" 
+                class="collidable menu"
                 material="src: #observatory" 
-                intersect 
-                sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
+                sphereexpand="videoSrc: video_one; videosphereId: videosphere_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -180,7 +173,6 @@ export default function AFrameScene() {
                 animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
                 animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200"
                 class="collidable"
-                intersect 
                 backhome></a-sphere>
       </a-entity>
       
