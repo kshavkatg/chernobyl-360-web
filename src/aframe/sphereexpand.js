@@ -45,7 +45,7 @@ AFRAME.registerComponent('sphereexpand', {
         overlay.classList.remove("collidable")
         backSphere.classList.remove("collidable")
         // set show-video component with videosrc
-        videosphere.setAttribute("show-menu", "videoSrc: video_one;" )
+        videosphere.setAttribute("show-menu", `videoSrc: ${this.data.videoSrc}`)
       }   
     }
 

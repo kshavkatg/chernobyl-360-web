@@ -6,15 +6,6 @@ AFRAME.registerComponent('show-menu', {
   },
     
   init: function () {
-
-     const homeworldelements = document.querySelectorAll("#homeworld")
-     const overlay = document.getElementById("sphere_overlay")
-     const backGroup = document.getElementById('back')
-     const backSphere = document.getElementById('back_sphere')
-     const videoOne = document.getElementById('video_one')
-     const videoTwo = document.getElementById('video_two')
-     const videoThree = document.getElementById('video_three')
-     const menuElements = document.querySelectorAll(".menu")
      
      let intersectionDistance = 0;
 
@@ -23,12 +14,18 @@ AFRAME.registerComponent('show-menu', {
      }
 
      const showMenu = (e) => {
+
+      const homeworldelements = document.querySelectorAll("#homeworld")
+      const overlay = document.getElementById("sphere_overlay")
+      const backGroup = document.getElementById('back')
+      const backSphere = document.getElementById('back_sphere')
+      const video = document.getElementById(this.data.videoSrc)
+      const menuElements = document.querySelectorAll(".menu")
+      
       // if intersection distance the same (on desktop) its a click, on touch we do not need draging 
       let newDistance = Math.round(e.detail.intersection.distance * 10) / 10;
       if (intersectionDistance === newDistance || e.type === "touch") {
-        videoOne.pause()
-        videoTwo.pause()
-        videoThree.pause()
+        video.pause()
         backGroup.setAttribute("visible", true)
         backSphere.setAttribute("backhome", `videoSrc: ${this.data.videoSrc}`)
         // show and make the overlay collidable

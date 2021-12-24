@@ -125,7 +125,7 @@ export default function AFrameScene() {
                 id="sphere_four"
                 class="collidable menu"
                 material="src: #observatory" 
-                sphereexpand="videoSrc: video_one;"></a-sphere>
+                sphereexpand="videoSrc: video_four;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -134,16 +134,16 @@ export default function AFrameScene() {
         </a-entity>
 
         <a-entity 
-          id="sphere_group_four"
+          id="sphere_group_five"
           position="4.1 1.7 -6.5 "
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
-                id="sphere_four"
+                id="sphere_five"
                 class="collidable menu"
                 scale="0.7 0.7 0.7"
                 material="src: #observatory2" 
-                sphereexpand="videoSrc: video_two;"></a-sphere>
+                sphereexpand="videoSrc: video_five;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="0.8 0.8 0.8"
@@ -152,15 +152,15 @@ export default function AFrameScene() {
         </a-entity>
 
         <a-entity 
-          id="sphere_group_four"
+          id="sphere_group_six"
           position="5.3 4.3 -4.8 "
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
-                id="sphere_four"
+                id="sphere_five"
                 class="collidable menu"
                 material="src: #bordeauxtheater" 
-                sphereexpand="videoSrc: video_three;"></a-sphere>
+                sphereexpand="videoSrc: video_six;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
@@ -169,7 +169,7 @@ export default function AFrameScene() {
         </a-entity>
 
         <a-entity 
-          id="sphere_group_four"
+          id="sphere_group_seven"
           position="6.8 2.9 -2.4 "
           animation__mouseenter="property: scale;  to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 200"
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
@@ -177,7 +177,7 @@ export default function AFrameScene() {
                 id="sphere_four" 
                 class="collidable menu"
                 material="src: #observatory" 
-                sphereexpand="videoSrc: video_one;"></a-sphere>
+                sphereexpand="videoSrc: video_seven;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
