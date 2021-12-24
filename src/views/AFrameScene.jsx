@@ -3,6 +3,10 @@ import { useEffect } from 'react'
 import imageOne from '../images/video_one.png'
 import imageTwo from '../images/video_two.png'
 import imageThree from '../images/video_three.png'
+import imageFour from '../images/video_four.png'
+import imageFive from '../images/video_five.png'
+import imageSix from '../images/video_six.png'
+import imageSeven from '../images/video_seven.png'
 
 export default function AFrameScene() {
   useEffect(() => {
@@ -43,9 +47,13 @@ export default function AFrameScene() {
         
         <img id="background1" src="https://cdn.eso.org/images/publicationjpg/ESO_Paranal_360_Marcio_Cabral_Chile_09-CC.jpg" crossOrigin="anonymous"></img>
 
-        <img id="observatory" src={imageOne} crossOrigin="anonymous"></img>
-        <img id="observatory2" src={imageTwo} crossOrigin="anonymous"></img>
-        <img id="bordeauxtheater" src={imageThree} crossOrigin="anonymous"></img>
+        <img id="img-one" src={imageOne} crossOrigin="anonymous"></img>
+        <img id="img-two" src={imageTwo} crossOrigin="anonymous"></img>
+        <img id="img-three" src={imageThree} crossOrigin="anonymous"></img>
+        <img id="img-four" src={imageFour} crossOrigin="anonymous"></img>
+        <img id="img-five" src={imageFive} crossOrigin="anonymous"></img>
+        <img id="img-six" src={imageSix} crossOrigin="anonymous"></img>
+        <img id="img-seven" src={imageSeven} crossOrigin="anonymous"></img>
       </a-assets>
       
       
@@ -72,7 +80,7 @@ export default function AFrameScene() {
           <a-sphere 
                 id="sphere_one"
                 class="collidable menu"
-                material="src: #observatory" 
+                material="src: #img-one" 
                 sphereexpand="videoSrc: video_one;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -88,7 +96,7 @@ export default function AFrameScene() {
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere
                 id="sphere_two" 
-                material="src: #observatory2" 
+                material="src: #img-two" 
                 class="collidable menu"
                 sphereexpand="videoSrc: video_two;"></a-sphere>
           <a-sphere
@@ -107,7 +115,7 @@ export default function AFrameScene() {
                 id="sphere_three"
                 scale="0.8 0.8 0.8"
                 class="collidable menu" 
-                material="src: #bordeauxtheater" 
+                material="src: #img-three" 
                 sphereexpand="videoSrc: video_three;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -124,7 +132,7 @@ export default function AFrameScene() {
           <a-sphere 
                 id="sphere_four"
                 class="collidable menu"
-                material="src: #observatory" 
+                material="src: #img-four" 
                 sphereexpand="videoSrc: video_four;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -142,7 +150,7 @@ export default function AFrameScene() {
                 id="sphere_five"
                 class="collidable menu"
                 scale="0.7 0.7 0.7"
-                material="src: #observatory2" 
+                material="src: #img-five" 
                 sphereexpand="videoSrc: video_five;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -159,7 +167,7 @@ export default function AFrameScene() {
           <a-sphere 
                 id="sphere_five"
                 class="collidable menu"
-                material="src: #bordeauxtheater" 
+                material="src: #img-six" 
                 sphereexpand="videoSrc: video_six;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
@@ -176,7 +184,7 @@ export default function AFrameScene() {
           <a-sphere 
                 id="sphere_four" 
                 class="collidable menu"
-                material="src: #observatory" 
+                material="src: #img-seven`" 
                 sphereexpand="videoSrc: video_seven;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
