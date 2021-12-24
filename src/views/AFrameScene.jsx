@@ -25,6 +25,21 @@ export default function AFrameScene() {
         <video id="video_three" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
           <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-360-vr-video-white-yacht-sailing-in-the-ocean-view-to-the-distant-mountains-on-of-mauritius-island-and-vast-ocean-from-the-upper-deck-fishing-rods-fixed-at-the-back-of-the-motor-boat_HuMfB__73ffdfe4132e11b3b0d08e53e03715f6__P640.mp4" />
         </video>
+        <video id="video_four" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-naples-italy-january-04-2019-360-vr-video-timelapse-shot-of-people-traffic-in-galleria-umberto-i-public-shopping-gallery-under-huge-glass-dome-built-between-1887-1891_SHY8MiauV__780cffa1f4ac180d87fdf2eb4df371de__P640.mp4" />
+        </video>
+        <video id="video_five" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-venice-italy-april-22-2018-360-vr-video-people-walking-and-enjoying-architecture-at-st-marks-square-view-with-basilica-campanile-and-doges-palace-built-in-venetian-gothic-style_H5sC5hsEN__c7b44bc5ade43ec095e9e0fb89370b34__P640.mp4" />
+        </video>
+        <video id="video_six" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-frankfurt-am-main-germany-june-17-2016-360-vr-video-busy-streets-of-meinzer-landstrasse-and-taunusanlage-with-modern-business-skyscrapers-and-car-traffic_r-h4eFVr-__e1a6fe78b2712e8fc8bd26b975df41fb__P640.mp4" />
+        </video>
+        <video id="video_seven" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-valencia-spain-july-15-2016-360-vr-video-people-entertaining-in_Hd2DqZ82xj0rkjm0b__67185fd7cbf7961c6f4e97e506ed5bd8__P640.mp4" />
+        </video>
+        <video id="video_eight" style={{display: "none"}} autoPlay={false} loop crossOrigin="anonymous" playsInline>
+          <source type="video/mp4" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/5PNlDRM/videoblocks-paris-france-october-01-2017-360-vr-video-lively-rond-point-des-champs-elysees-marcel-dassault-with-walking-people-and-subway-entrance-transport-traffic-around-the-street_S9Im2RfBV__89622c434ad6477a90f8358090371a06__P640.mp4" />
+        </video>
         
         <img id="background1" src="https://cdn.eso.org/images/publicationjpg/ESO_Paranal_360_Marcio_Cabral_Chile_09-CC.jpg" crossOrigin="anonymous"></img>
 
