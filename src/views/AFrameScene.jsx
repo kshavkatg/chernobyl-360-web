@@ -1,5 +1,8 @@
 import 'aframe'
 import { useEffect } from 'react'
+import imageOne from '../images/video_one.png'
+import imageTwo from '../images/video_two.png'
+import imageThree from '../images/video_three.png'
 
 export default function AFrameScene() {
   useEffect(() => {
@@ -25,9 +28,9 @@ export default function AFrameScene() {
         
         <img id="background1" src="https://cdn.eso.org/images/publicationjpg/ESO_Paranal_360_Marcio_Cabral_Chile_09-CC.jpg" crossOrigin="anonymous"></img>
 
-        <img id="observatory" src="https://cdn.eso.org/images/screen/ESO_Paranal_360_Marcio_Cabral_Chile_05-CC.jpg" crossOrigin="anonymous"></img>
-        <img id="observatory2" src="https://cdn.eso.org/images/screen/ESO_Paranal_360_Marcio_Cabral_Chile_16-CC.jpg" crossOrigin="anonymous"></img>
-        <img id="bordeauxtheater" src="https://cdn.glitch.com/f2ee9d74-9726-4bed-9c30-2d49d6391dee%2FOp%C3%A9ra_National_de_Bordeaux%20(1).jpg?1547235572572" crossOrigin="anonymous"></img>
+        <img id="observatory" src={imageOne} crossOrigin="anonymous"></img>
+        <img id="observatory2" src={imageTwo} crossOrigin="anonymous"></img>
+        <img id="bordeauxtheater" src={imageThree} crossOrigin="anonymous"></img>
       </a-assets>
       
       
@@ -87,14 +90,15 @@ export default function AFrameScene() {
           animation__mouseleave="property: scale;  to: 1 1 1; startEvents: mouseleave; dur: 200">
           <a-sphere 
                 id="sphere_three"
+                scale="0.8 0.8 0.8"
                 class="collidable menu" 
                 material="src: #bordeauxtheater" 
                 sphereexpand="videoSrc: video_three; videosphereId: videosphere_three;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
-                scale="1.1 1.1 1.1"
+                scale="0.9 0.9 0.9"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: WATCH TRAILER;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: WATCH TRAILER;" scale="1.5 1.5 1.5" position="0 -1.4 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -122,13 +126,14 @@ export default function AFrameScene() {
           <a-sphere 
                 id="sphere_four"
                 class="collidable menu"
+                scale="0.7 0.7 0.7"
                 material="src: #observatory2" 
                 sphereexpand="videoSrc: video_two; videosphereId: videosphere_two;"></a-sphere>
           <a-sphere
                 id="sphere_orange_one"
-                scale="1.1 1.1 1.1"
+                scale="0.8 0.8 0.8"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: ARTIFACTS;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: ARTIFACTS;" scale="1.5 1.5 1.5" position="0 -1.2 0"></a-entity>
         </a-entity>
 
         <a-entity 
