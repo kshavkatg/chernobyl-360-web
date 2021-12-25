@@ -86,7 +86,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;" text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: OPACHYCHI VILLAGE;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;" text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: MAJESTIC ROCKY COAST" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -103,7 +103,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: 'GHOST TOWN' PRIPYAT;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: PARIS FRANCE;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -121,7 +121,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="0.9 0.9 0.9"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: WATCH TRAILER;" scale="1.5 1.5 1.5" position="0 -1.4 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: WHITE YACHT SAILING;" scale="1.5 1.5 1.5" position="0 -1.4 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -138,7 +138,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: FLY OVER;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: NAPLES ITALY;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -156,7 +156,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="0.8 0.8 0.8"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: ARTIFACTS;" scale="1.5 1.5 1.5" position="0 -1.2 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: VENICE ITALY;" scale="1.5 1.5 1.5" position="0 -1.2 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -173,7 +173,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: RADIOACTIVE WASTE MANAGMENT;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: FRANKFURT GERMANY;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
         <a-entity 
@@ -190,7 +190,7 @@ export default function AFrameScene() {
                 id="sphere_orange_one"
                 scale="1.1 1.1 1.1"
                 material="color: orange; side: back;"></a-sphere>
-          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: DRUM MONITORING;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
+          <a-entity billboard="targetCameraId: camera;"  text="wrapCount: 12; width: 1.5; align: center; anchor: center; value: VALENCIA SPAIN;" scale="1.5 1.5 1.5" position="0 -1.7 0"></a-entity>
         </a-entity>
 
       </a-entity>
